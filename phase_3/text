@@ -1,0 +1,82 @@
+GET and POST methods
+
+- The `GET` method is used to retrieve data from the server.
+- The `POST` method is used to send data to the server, typically when submitting a form.
+
+Manual Form Handling with Flask
+It means creating forms in HTML and processing them in Flask without using any additional libraries like Flask-WTF.
+This involves handling form data directly from the request object.
+
+manual form handling with request.flask
+
+Example = blog website
+
+- In this website we create a form in HTML to collect user feedback.
+- The form includes fields for the user's name and their message.
+- When the user submits the form, Flask processes the data and stores it.
+- After processing, Flask redirects the user to a "Thank You" page.
+
+Flash Messages
+flash() + get_flashed_messages()
+
+Example = ATM transaction
+
+- When a user performs an action, such as making a transaction at an ATM,
+  a message is displayed indicating that the transaction was successful.
+- This message appears temporarily and may disappear after a refresh or after some time.
+- These messages are known as Flash Messages in Flask.
+- Flash messages are used to display temporary messages to users, such as success or error notifications.
+- In Flask, we use the `flash()` function to create these messages, and we retrieve them
+  using `get_flashed_messages()` in our HTML templates.
+
+In simple how to write in Python = Wherever we want the msg just write = "flash("message")"
+for HTML = {% with message = get_flashed_messages %}
+
+- The `flash()` function is used to create a message that will be displayed to the user.
+- The `get_flashed_messages()` function retrieves these messages from the session.
+- In the HTML template, we can display these messages using a loop to iterate through them.
+- This allows us to show multiple messages if needed.
+
+installation command
+
+```bash
+pip3 install Flask-Flash-Messages
+```
+
+NOTE
+1- Flash + redirect these both should go together,
+as u send them differently then after refreshing page it will show the msg again and agin
+
+2- Always set a "secret.key"
+because when ur using flash messages flask use session and to work on session we need a secret.key
+so it is compalsery to use a secret.key
+
+3- ADVANCE_PART = "chategary wise messages" can be displaied, for styling
+
+redirect(url_for("route_name"))
+
+- The `redirect` function is used to send the user to a different route after processing a form.
+- `url_for("route_name")` generates the URL for the specified route, allowing
+- Flask to handle the URL dynamically, even if the route changes in the future.
+- The `redirect` function sends a response to the client to navigate to the specified URL.
+
+Example = The redirect means that after the form is processed, the user will be taken to a "Thank You" page,
+which is typically used to confirm that their submission was successful.
+
+Flash WTF
+
+- Flask-WTF is an extension for Flask that simplifies form handling and validation.
+- It integrates with Flask's session management and provides CSRF protection.
+- To use it, install Flask-WTF using pip = `pip3 install Flask-WTF`.
+- Define forms using Flask-WTF's `FlaskForm` class, which allows you to create fields and validation rules easily.
+- Use the form in your views and templates, handling form submission and validation errors as needed.
+
+CSRF
+It stands for Cross-Site Request Forgery.
+
+It is a type of security attack where a malicious website tricks a user's browser into performing actions on another website where the user is authenticated, without their knowledge. For example, if a user is logged into their bank account, a CSRF attack could trick their browser into transferring money without their consent.
+
+In Flask-WTF, CSRF protection is provided by default to prevent these attacks. It works by adding a hidden token to forms, which must be submitted and validated with each request. If the token is missing or invalid, the request is rejected.
+
+Summary:
+CSRF = Cross-Site Request Forgery, a security threat where unauthorized commands are transmitted from a user that the web application trusts. Flask-WTF helps protect against this by using CSRF tokens in forms.

@@ -1,0 +1,16 @@
+In this a HTML code is connected with flask and made a blog page
+In this learn what is jinja2, template inheritance
+
+so, without inheritance we need to write on each_pages the "Header" & "Footer" again and again
+but with the help of inheritance we write the code once and inherit the property again & again
+
+template_inheritance
+we make a base.html file in that write a base_code once and can we used in every code/page, if we need to change anythink then we will only change in base_code then automatically the other pages will get upadted.
+
+base_code
+{% block content %} {% endblock %}
+
+and to fetch this file in other files use
+{% extends "base.html" %}
+
+this file will extract the base_code file to the current file so no need to rewrite the same content again

@@ -1,0 +1,36 @@
+JINJA2 is usually use when for ex
+when u hake a website for a school/clg
+when the user login the page, then the welcome page should show (welcome and the users name)
+
+hers the JINJA2 can to make the dynamic webpages
+we can do everything like app addding python values, applying loops, conditions can be applied all u can do inside HTML template.
+
+JINJA2 is a template engine inside the flask, we can use this to display python variables inside HTML.
+
+---
+
+---
+
+syntax:
+1- python values:
+{{ variables}}
+
+{{ name }}
+
+ex: welcome {{ name }} #here the name will we replaced by the given input
+
+---
+
+2- conditions
+{% if %}....{% endif %}
+
+ex: is_topper = True
+{% if is_topper %}
+
+<p>You are a Topper</p>
+
+{% else %}
+
+<p>You need to work hard</p>
+
+{% endif %}
