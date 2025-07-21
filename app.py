@@ -1,30 +1,16 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route("/")
-def login():
-    return render_template("login.html")
+def home():
+    return render_template("home.html")
 
 
-@app.route("/submit", methods=["POST"])
-def submit():
-    username = request.form.get("username")
-    password = request.form.get("password")
-
-    """" if username == "swappy!" and password == "514":
-        return render_template("welcome.html", name=username) """
-
-    valid_user = {
-        "swappy!": "514",
-        "admin": "123",
-        "user": "pass"
-    }
-    if username in valid_user and password == valid_user[username]:
-        return render_template("welcome.html", name=username)
-    else:
-        return "Invalid credentials"
+@app.route("/about")
+def about():
+    return render_template("about.html")
 
 
 if __name__ == "__main__":
