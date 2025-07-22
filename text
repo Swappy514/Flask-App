@@ -1,16 +1,36 @@
-In this a HTML code is connected with flask and made a blog page
-In this learn what is jinja2, template inheritance
+JINJA2 is usually use when for ex
+when u hake a website for a school/clg
+when the user login the page, then the welcome page should show (welcome and the users name)
 
-so, without inheritance we need to write on each_pages the "Header" & "Footer" again and again
-but with the help of inheritance we write the code once and inherit the property again & again
+hers the JINJA2 can to make the dynamic webpages
+we can do everything like app addding python values, applying loops, conditions can be applied all u can do inside HTML template.
 
-template_inheritance
-we make a base.html file in that write a base_code once and can we used in every code/page, if we need to change anythink then we will only change in base_code then automatically the other pages will get upadted.
+JINJA2 is a template engine inside the flask, we can use this to display python variables inside HTML.
 
-base_code
-{% block content %} {% endblock %}
+---
 
-and to fetch this file in other files use
-{% extends "base.html" %}
+---
 
-this file will extract the base_code file to the current file so no need to rewrite the same content again
+syntax:
+1- python values:
+{{ variables}}
+
+{{ name }}
+
+ex: welcome {{ name }} #here the name will we replaced by the given input
+
+---
+
+2- conditions
+{% if %}....{% endif %}
+
+ex: is_topper = True
+{% if is_topper %}
+
+<p>You are a Topper</p>
+
+{% else %}
+
+<p>You need to work hard</p>
+
+{% endif %}
