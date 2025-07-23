@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %} My Website {% endblock %}</title>
+    <title>{% block title %} My Feedback Form {% endblock %}</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -12,14 +12,22 @@
         background-color: #f4f4f4;
       }
       header {
-        background-color: #333;
-        color: white;
+        background-color: #00ffc3;
+        color: rgb(16, 8, 59);
         padding: 10px 0;
         text-align: center;
       }
+      main {
+        text-align: center;
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
       footer {
-        background-color: #fcf650;
-        color: black;
+        background-color: #00ffc3;
+        color: rgb(123, 83, 232);
         text-align: center;
         padding: 10px 0;
         position: fixed;
@@ -27,7 +35,7 @@
         bottom: 0;
       }
       nav a {
-        color: white;
+        color: rgb(26, 22, 22);
         margin: 0 15px;
         text-decoration: none;
       }
@@ -35,16 +43,16 @@
   </head>
   <body>
     <header>
-      <h1>My Site</h1>
+      <h1>Feedback Page</h1>
       <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
+        <a href="/feedback">Feedback</a>
       </nav>
     </header>
 
-    {% block content %} {% endblock %}
+    <main>{% block content %} {% endblock %}</main>
+
     <footer>
-      <p>@2025 by Swaroop Jadhav. All rights reserved.</p>
+      <p>&copy; 2025 My Feedback Form</p>
     </footer>
   </body>
 </html>
