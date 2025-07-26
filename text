@@ -1,36 +1,20 @@
-JINJA2 is usually use when for ex
-when u hake a website for a school/clg
-when the user login the page, then the welcome page should show (welcome and the users name)
+`sqlite` means a lightweight disk-based database
+that doesn't require a separate server
+process and allows access to the database using a nonstandard variant of the SQL query language.
+It is often used for local or embedded databases.
 
-hers the JINJA2 can to make the dynamic webpages
-we can do everything like app addding python values, applying loops, conditions can be applied all u can do inside HTML template.
+`sqlalchemy` means a SQL toolkit and Object-Relational Mapping (`ORM`) system for Python.
+It provides a full suite of well-known enterprise-level persistence patterns,
+designed for efficient and high-performing database access.\
 
-JINJA2 is a template engine inside the flask, we can use this to display python variables inside HTML.
+ORMs allow developers to interact with databases using Python objects instead of SQL queries,
+making database operations more intuitive and easier to manage.
+`SQLAlchemy` is widely used in web applications and other Python projects that require database interaction.
 
----
+`ORM` stands for Object-Relational Mapping,
+which is a programming technique used to convert data between incompatible type systems in object-oriented programming languages.
 
----
-
-syntax:
-1- python values:
-{{ variables}}
-
-{{ name }}
-
-ex: welcome {{ name }} #here the name will we replaced by the given input
-
----
-
-2- conditions
-{% if %}....{% endif %}
-
-ex: is_topper = True
-{% if is_topper %}
-
-<p>You are a Topper</p>
-
-{% else %}
-
-<p>You need to work hard</p>
-
-{% endif %}
+`sqlalchemy` in easy_words means a tool that helps developers work with databases using Python code instead of writing SQL queries directly.
+and `orm`means a way to connect Python classes to database tables, allowing developers to use Python objects to interact with the database.
+`sqlite` in easy_words means a simple database that stores data in files on your computer,
+making it easy to use without needing a separate database server.
